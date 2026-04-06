@@ -1,0 +1,252 @@
+/* App.css - Elegant Minimalist (Calvin Klein Inspired) */
+
+/* Basic Reset for consistent spacing and sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography & Global Styles */
+body {
+    background-color: #ffffff; /* Pure white background */
+    /* Define a sophisticated sans-serif font stack */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #000000; /* Pure black text for strong contrast */
+    line-height: 1.6;
+    letter-spacing: 0.02em; /* Subtle spacing for sophistication */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+    padding: 60px 20px; /* Ample breathing room top/bottom */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Clean, uppercase main title with light weight and separator */
+.header-title {
+    font-size: 2.2rem;
+    font-weight: 300; /* Light weight for elegance */
+    text-transform: uppercase; /* Classic high-fashion style */
+    letter-spacing: 0.12em; /* Wide letter spacing */
+    color: #000000;
+    margin-bottom: 50px;
+    text-align: center; /* Center for balanced composition */
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.header-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Subtle understated underline */
+}
+
+/* Section Headings */
+h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #555555; /* Subtle dark grey label */
+    margin-bottom: 25px;
+}
+
+/* Form Container Styles - Remove shadows, use deep white space */
+.form-container {
+    background: #ffffff;
+    padding: 0; /* Let surrounding padding be the space */
+    border: none;
+    box-shadow: none;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #e0e0e0; /* Subtle separator line */
+    padding-bottom: 50px;
+}
+
+.form-group {
+    display: flex;
+    gap: 20px; /* Increased gap between form fields */
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Specific class for description textarea */
+.form-group.full-width {
+    margin-bottom: 30px;
+}
+
+/* Minimalist Input Styles - Fine bottom border only */
+.form-input {
+    padding: 12px 0; /* Only vertical padding for minimal style */
+    border: none;
+    border-bottom: 1px solid #cccccc; /* Subtle bottom border only */
+    border-radius: 0; /* Sharp corners, no rounding */
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    background-color: transparent;
+    transition: border-color 0.2s ease;
+    letter-spacing: 0.02em;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #000000; /* Deep black on active input */
+}
+
+.form-input::placeholder {
+    color: #888888;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+/* We will manage width on input fields in CSS by adding distinct classes,
+   to override and eliminate JSX inline styles */
+.form-input.price-input-form {
+    width: 140px;
+}
+
+.form-input.small-input-form {
+    width: 110px;
+}
+
+/* Remove default styling for dropdowns and create clean look */
+select.form-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 16px;
+    padding-right: 25px; /* Room for custom icon */
+}
+
+/* Large text block styling - full border works better for text blocks */
+textarea.form-input {
+    height: 80px;
+    line-height: 1.6;
+    padding: 12px;
+    border: 1px solid #cccccc; /* Fine border for text area */
+    border-radius: 0;
+}
+
+/* Primary Action Button (Add Property) - Black with white text, inverts on hover */
+.btn-submit {
+    background-color: #000000; /* Pure Black */
+    color: #ffffff; /* White text */
+    border: 1px solid #000000;
+    padding: 15px 30px;
+    border-radius: 0; /* Sharp corners */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #ffffff; /* White on hover */
+    color: #000000; /* Black on hover */
+}
+
+/* Inventory Table Styles - Clean structure, deep white space */
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: none;
+    margin-top: 10px;
+}
+
+.inventory-table th {
+    background-color: transparent; /* Clean th with no background */
+    color: #555555; /* Understated dark grey labels */
+    padding: 15px 10px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.inventory-table td {
+    padding: 20px 10px; /* Increased deep vertical padding */
+    border-bottom: 1px solid #f0f0f0; /* Very light grey separator */
+    font-size: 14px;
+    color: #000000;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+/* Custom Table Cell Styling */
+.type-cell {
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.details-cell {
+    color: #444444;
+    font-size: 13px;
+}
+
+.price-text {
+    font-weight: 600;
+    color: #000000;
+    font-size: 1.2rem;
+    letter-spacing: 0.01em;
+}
+
+.notes-cell {
+    max-width: 250px;
+    color: #666666;
+    font-size: 13px;
+    line-height: 1.4;
+    /* ellipsis styles are handled in JSX */
+}
+
+/* Table select clean dropdown style */
+.table-select {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 0;
+    width: 100px;
+}
+
+/* Actions Column with Text-based Action */
+.actions-cell {
+    text-align: right;
+}
+
+/* Minimalist Delete button as text-only action */
+.btn-delete {
+    background-color: transparent;
+    color: #cc0000; /* Subtle red for action */
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    text-decoration: underline; /* Standard text link action style */
+    opacity: 0.7;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.btn-delete:hover {
+    opacity: 1;
+    color: #ee0000;
+}
